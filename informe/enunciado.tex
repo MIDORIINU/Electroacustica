@@ -1,0 +1,100 @@
+
+\subsection{Resumen de objetivos}
+
+
+\normalfont
+
+Calcular el volumen de la caja, frecuencia de corte y frecuencia de sintonía de la caja (si aplica), para el parlante \textbf{scanspeak revelator 32W/4878T00}.
+
+
+
+\begin{itemize}
+\item Calcular para una caja cerrada para un $Q_{T} = 0.707$.
+\item Utilizar el método de Keele para un $Q_{T} = 0.303$. (Obteniendo un diseño para Bass Reflex).
+\item Utilizar las tablas de Thielle-Small en la alineación correspondiente a $Q_{T} = 0.303$. (Obteniendo un diseño para Bass Reflex).
+\end{itemize}
+
+
+
+
+
+\subsection{Datos del fabricante}
+
+
+Los parámetros \textit{Thiele-small} obtenidos a partir de la hoja de datos del parlante analizado se pueden ver en el cuadro~\tableref{table:table_datasheet_parameters} y las recomendaciones del fabricante en el cuadro~\tableref{table:table_factory_recomendations}.
+
+
+%% \noindent
+%% \begin{center}
+ 
+%%\begin{spacing}{1}  
+\begin{table}[H]  %%\centering
+
+    \setlength\arrayrulewidth{1.5pt}
+    \arrayrulecolor{white}
+    \def\clinecolor{\hhline{|>{\arrayrulecolor{white}}-%
+    >{\arrayrulecolor{white}}|-|-|-|}}
+\resizebox{0.98 \textwidth}{!}{% 
+       
+\begin{tabularx}{1 \textwidth}%
+    {|
+    >{\columncolor{white} \centering\arraybackslash}m{0.20\textwidth}
+     |
+    >{\columncolor{white} \centering\arraybackslash}m{0.20\textwidth}
+     |
+    >{\columncolor{white} \centering\arraybackslash}m{0.60\textwidth}
+     |
+    }
+    \rowcolor{HeadersColor} \thead{Parámetro} & \thead{Valor} & \thead{Definición}  \\    
+    \hhline{|-|-|-|}
+    \rowcolor{gray!20} \cellcolor{gray!40} $f_{s}$ & $18 \si[per-mode=symbol]{\hertz}$ & Frecuencia de resonancia del parlante al aire   \\
+    \hhline{|-|-|-|}
+    \rowcolor{gray!20} \cellcolor{gray!40} $V_{as}$ & $203.9 \si[per-mode=symbol]{\liter}$ & Volumen acústico de suspensión   \\ 
+    \hhline{|-|-|-|}
+    \rowcolor{gray!20} \cellcolor{gray!40} $Q_{ts}$ & $\num{0.32}$ & Q total del parlante   \\       
+    \end{tabularx}}
+	\caption{\footnotesize{Parámetros de \textit{Thiele - Small} del fabricante.}}
+	\label{table:table_datasheet_parameters}
+\end{table}
+%%\end{spacing}
+
+%% \end{center}
+
+
+
+
+%% \noindent
+%% \begin{center}
+ 
+%%\begin{spacing}{1}  
+\begin{table}[H]  %%\centering
+
+    \setlength\arrayrulewidth{1.5pt}
+    \arrayrulecolor{white}
+    \def\clinecolor{\hhline{|>{\arrayrulecolor{white}}-%
+    >{\arrayrulecolor{white}}|-|-|-|}}
+\resizebox{0.98 \textwidth}{!}{% 
+       
+\begin{tabularx}{1 \textwidth}%
+    {|
+    >{\columncolor{white} \centering\arraybackslash}m{0.20\textwidth}
+     |
+    >{\columncolor{white} \centering\arraybackslash}m{0.35\textwidth}
+     |
+    >{\columncolor{white} \centering\arraybackslash}m{0.45\textwidth}
+     |
+    }
+    \rowcolor{HeadersColor} \thead{Caso}  & \thead{Valores} & \thead{Definiciones} \\    
+    \hhline{|-|-|-|}
+    \rowcolor{gray!20} \cellcolor{gray!40} Gabinete cerrado & \center $V_{box} = 67 \si[per-mode=symbol]{\liter}$, $f_{3} = 36 \si[per-mode=symbol]{\hertz}$ & $V_{box}:$ Volumen del gabinete. \newline $f_{3}:$ Frecuencia de corte del sistema completo. \\  
+    \hhline{|-|-|-|}  
+    \rowcolor{gray!20} \cellcolor{gray!40} Gabinete abierto (vented box) & $V_{box} = 129 \si[per-mode=symbol]{\liter}$, $f_{b} = 20 \si[per-mode=symbol]{\hertz}$, $f_{3} = 21 \si[per-mode=symbol]{\hertz}$ & $V_{box}:$ Volumen del gabinete. \newline $f_{b}:$ Frecuencia de sintonía para Bass Reflex. \newline $f_{3}:$ Frecuencia de corte del sistema completo. \\
+    \end{tabularx}}
+	\caption{\footnotesize{Recomendaciones del fabricante.}}
+	\label{table:table_factory_recomendations}
+\end{table}
+%%\end{spacing}
+
+
+
+\clearpage

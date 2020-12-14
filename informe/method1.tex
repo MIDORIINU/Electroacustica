@@ -1,0 +1,117 @@
+
+\normalfont
+
+Para el diseño por este método, buscamos un $QT = 0.707$ del conjunto gabinete-parlante. Para el diseño a caja cerrada se usa la siguiente relación:
+
+\begin{equation*}
+\frac{Q_{T}}{Q_{ts}} = \frac{f_{3}}{f_{s}} = \sqrt{\frac{V_{as}}{V_{asB}}}
+\end{equation*}
+
+De donde se obtiene:
+
+\begin{equation}
+\boxed{ f_{3} = \frac{Q_{T} \cdot f_{s} }{Q_{ts}} }
+\end{equation}
+
+Obteniéndose:
+
+\begin{equation*}
+\mathcolorbox{EQColor}{ f_{3} = 39.769 \si[per-mode=symbol]{\hertz} }
+\end{equation*}
+
+
+
+Y se puede despejar el volumen del gabinete, $V_{box}$, como:
+
+\begin{equation*}
+\frac{1}{V_{asB}} = \frac{1}{V_{as}} + \frac{1}{V_{box}}
+\end{equation*}
+
+
+Obtenemos el tamaño de la caja con las expresiones:
+
+\begin{equation*}
+V_{asB} = \frac{V_{as}}{ \left( \frac{Q_{T}}{Q_{ts}} \right)^2 }
+\end{equation*}
+
+\begin{equation*}
+V_{box} = \frac{1}{\frac{1}{V_{asB}} - \frac{1}{V_{as}}}
+\end{equation*}
+
+Finalmente:
+
+\begin{equation}
+\boxed{ V_{box} = \frac{V_{as}}{ \left( \frac{Q_{T}}{Q_{ts}} \right)^2 - 1} }
+\end{equation}
+
+
+\begin{equation*}
+\mathcolorbox{EQColor}{ V_{box} = 52.533 \si[per-mode=symbol]{\liter} }
+\end{equation*}
+
+
+
+
+
+%% \noindent
+%% \begin{center}
+ 
+%%\begin{spacing}{1}  
+\begin{table}[H]  %%\centering
+
+    \setlength\arrayrulewidth{1.5pt}
+    \arrayrulecolor{white}
+    \def\clinecolor{\hhline{|>{\arrayrulecolor{white}}-%
+    >{\arrayrulecolor{white}}|-|-|-|}}
+\resizebox{0.98 \textwidth}{!}{% 
+       
+\begin{tabularx}{1 \textwidth}%
+    {|
+    >{\columncolor{white} \centering\arraybackslash}m{0.20\textwidth}
+     |
+    >{\columncolor{white} \centering\arraybackslash}m{0.35\textwidth}
+     |
+    >{\columncolor{white} \centering\arraybackslash}m{0.45\textwidth}
+     |
+    }
+    \rowcolor{EQColor} \thead{Parámetro}  & \thead{Recomendado} & \thead{Diseñado} \\    
+    \hhline{|-|-|-|}
+    \rowcolor{gray!20} \cellcolor{gray!40} $V_{box}$ &  $67 \si[per-mode=symbol]{\liter}$ & $52.533 \si[per-mode=symbol]{\liter}$ \\  
+    \hhline{|-|-|-|}  
+    \rowcolor{gray!20} \cellcolor{gray!40} $f_{3}$ & $36 \si[per-mode=symbol]{\hertz}$ & $39.769 \si[per-mode=symbol]{\hertz}$ \\
+    \hhline{|-|-|-|}  
+    \rowcolor{gray!20} \cellcolor{gray!40} $Q_{T}$ & \num{0.64} & \num{0.707} \\    
+    \end{tabularx}}
+	\caption{\footnotesize{Comparación de los valores diseñados con los recomendados por el fabricante.}}
+	\label{table:table_comparison_recomendations}
+\end{table}
+%%\end{spacing}
+
+
+Se puede observar en el cuadro~\tableref{table:table_comparison_recomendations} que el fabricante obtiene una frecuencia de corte menor con un volumen de caja mayor. En el caso de la recomendación del fabricante obtenemos una frecuencia de corte menor a costa de un volumen más grande de parlante. Pero sabemos que dado el $Q_{T}$ del fabricante, no es el óptimo como de \num{0.707}. Como se vio en clase, un $Q_{T}$ menor a \num{0.707} provocaría que la respuesta en frecuencia no sea plana en las bajas frecuencias.\\
+
+
+Con los valores diseñados, recordando que tiene que contener el parlante de $32 \si[per-mode=symbol]{\centi\meter}$ de diámetro y $15 \si[per-mode=symbol]{\centi\meter}$ de largo, podemos calcular las dimensiones de la caja.
+
+Si hacemos el largo de $33 \si[per-mode=symbol]{\centi\meter}$ para acomodar el diámetro del parlante, y redondeando el volumen obtenido a $52600 \si[per-mode=symbol]{\cubic\centi\meter}$, haciendo la base cuadrada obtenemos:
+
+
+\begin{equation*}
+Alto = Ancho = \sqrt{\frac{V_{box}}{Largo}} = \sqrt{\frac{52600 \si[per-mode=symbol]{\cubic\centi\meter}}{33 \si[per-mode=symbol]{\centi\meter}}} = 39.924 \si[per-mode=symbol]{\centi\meter} \approx 40 \si[per-mode=symbol]{\centi\meter}
+\end{equation*}
+
+Finalemente obtenemos:
+
+
+\begin{mymathbox}[ams align*, title=Dimensiones de la caja (método de suspensión acústica), colframe=EQColor!30!EQColor]
+Alto = 40 \si[per-mode=symbol]{\cubic\centi\meter} \\
+Ancho = 40\si[per-mode=symbol]{\cubic\centi\meter} \\
+Largo = 33 \si[per-mode=symbol]{\cubic\centi\meter}
+\end{mymathbox}
+
+
+
+
+
+
+
